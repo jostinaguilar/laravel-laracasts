@@ -64,7 +64,7 @@
                     From: "transform opacity-100 scale-100"
                     To: "transform opacity-0 scale-95"
                 -->
-                                <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
+                                <div class="absolute right-0 z-10 mt-2 hidden w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none"
                                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                                      tabindex="-1">
                                     <!-- Active: "bg-gray-100 outline-none", Not Active: "" -->
@@ -149,8 +149,9 @@
         </nav>
 
         <header class="bg-white shadow">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:flex sm:justify-between sm:px-6 lg:px-8">
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+                <x-button href="/jobs/create">Create new job</x-button>
             </div>
         </header>
         <main>

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class JobsController extends Controller
 {
-    public function index(Job $job)
+    public function index()
     {
         $jobs = Job::with('employer')->latest()->simplePaginate(3);
         return view('jobs.index', ['jobs' => $jobs]);
@@ -43,6 +43,8 @@ class JobsController extends Controller
 
     public function edit(Job $job)
     {
+        /* Gate::authorize('edit-job', $job); */
+
         return view('jobs.edit', [
             'job' => $job
         ]);
